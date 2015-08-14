@@ -10,8 +10,13 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: app_db
+  pool: 5
+  host: localhost
+  username: app_user
+  password: AppDbPassw0rd!
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

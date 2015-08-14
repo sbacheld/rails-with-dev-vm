@@ -3,7 +3,7 @@ This project provides a simple Rails project and a development environment that 
 # Getting Started
 1. From servers/development directory, run "vagrant up". This will provision the entire VM
 2. From project home directory, run "cap development vagrant:deploy". This will load the ruby code onto the VM and run the required migrations.
-3. Verify the installation by visiting http://192.168.200.10 and http://192.168.200.10/test
+3. Verify the installation by visiting http://192.168.200.100 and http://192.168.200.100/test/index
 
 # Shared directories
 * /project : Maps to project root directory.
@@ -32,16 +32,16 @@ cap development vagrant:deploy
 # Add New Puppet Module
 If you wish to add a new Puppet module, you can use the following steps.
 
-1. SSH to VM
+* SSH to VM
 ```
 vagrant ssh
 ```
-2. Install a puppet module to the puppet modules directory
+* Install a puppet module to the puppet modules directory
 ```
 puppet module install -i /vagrant/puppet/modules <module-name>
 ```
-3. Update servers/development/puppet/manifests/default.pp
-4. From servers/development, run the provision command
+* Update servers/development/puppet/manifests/default.pp
+* From servers/development, run the provision command
 ```
 vagrant provision
 ```
