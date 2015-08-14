@@ -1,0 +1,34 @@
+# Getting Started
+1. From servers/development directory, run "vagrant up". This will provision the entire VM
+2. From project home directory, run "cap development vagrant:deploy". This will load the ruby code onto the VM and run the required migrations.
+
+# Shared directories
+/project : Maps to project root directory.
+/vagrant : Maps to servers/web-server. Default provided by Vagrant.
+
+# Access VM
+vagrant ssh
+
+# Reload VM
+vagrant reload
+
+# Log files
+/var/log/nginx/error.log 
+/var/log/nginx/access.log 
+
+# Deploy current changes to Vagrant VM
+cap development vagrant:deploy
+
+# Add new Puppet module
+1. SSH to VM
+2. Run: puppet module install -i /vagrant/puppet/modules <module-name>
+3. Update puppet/manifests/default.pp
+4. Run: vagrant provision
+
+# Connecting to the DB
+Connection properties:
+  Hostname: localhost
+  Port: 15432
+  Database: app_db
+  Username: app_user
+  Password: AppDbPassw0rd!
