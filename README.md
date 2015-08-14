@@ -3,7 +3,7 @@ This project provides a simple Rails project and a development environment that 
 # Getting Started
 * From servers/development directory, provision the VM and deploy the project using the following command:
 ```
-vagrant up && cd ../../ && cap development vagrant:deploy
+vagrant up && cd ../../ && bundle install && cap development vagrant:deploy
 ```
 * Verify the installation by visiting http://192.168.200.100 and http://192.168.200.100/test/index
 
