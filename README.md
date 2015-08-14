@@ -11,6 +11,15 @@ vagrant up && cd ../../ && cap development vagrant:deploy
 * /project : Maps to project root directory.
 * /vagrant : Maps to servers/web-server. Default provided by Vagrant.
 
+# Config Files
+* Puppet: servers/development/puppet/manifests/default.pp
+* Vagrant: servers/development/Vagrantfile
+* Database: config/database.yml
+* Deployment:
+  * config/deploy.rb
+  * config/deploy/development.rb
+* Capistrano: Capfile
+
 # Access VM
 To SSH to the VM, run the following command from the servers/development directory.
 ```
